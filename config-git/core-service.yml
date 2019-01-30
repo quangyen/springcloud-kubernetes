@@ -1,0 +1,9 @@
+server:
+  port: 8082
+
+spring:
+  rabbitmq:
+    username: admin
+    password: admin
+    host: srv.docker
+    port: 5672

@@ -1,0 +1,35 @@
+server:
+  port: 8888
+
+logging:
+  level:
+    com.netflix.eureka: OFF
+    com.netflix.discovery: OFF
+
+spring:
+  application:
+    name: configserver
+  profiles:
+    active: vault, git
+  cloud:
+    config:
+      server:
+        vault:
+          order: 1
+          backend: secret2
+          kv-version: 2
+          host: localhost
+          port: 8200
+        git:
+          order: 2
+          uri: https://github.com/quangyen/springcloud-openshift
+          search-paths: config-git
+          default-label: master
+          clone-on-start: true
+          refresh-rate: 600
+
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

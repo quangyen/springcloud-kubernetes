@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    config:
+      name: h2
+      uri: http://localhost:8888
+      token: root

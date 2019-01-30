@@ -1,0 +1,55 @@
+spring:
+  application:
+    name: zuul-service
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    region: default
+    registryFetchIntervalSeconds: 5
+
+logging:
+  level:
+    com.netflix.eureka: OFF
+    com.netflix.discovery: OFF
+
+zuul:
+  routes:
+    eureka:
+      path: /eureka/**
+      url: http://localhost:8761
+      sensitive-headers: Set-Cookie,Authorization
+    composite:
+      path: /composite/**
+      url: http://localhost:8081
+      sensitive-headers: Set-Cookie,Authorization
+  ratelimit:
+    enabled: true
+    repository: JPA
+    policy-list:
+      eureka:
+        - limit: 5
+          refresh-interval: 60
+          type:
+            - origin
+      composite:
+          - limit: 5
+            refresh-interval: 60
+            type:
+              - origin
+  strip-prefix: true
+
+hystrix:
+  command:
+    eureka:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 600000
+    composite:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 600000

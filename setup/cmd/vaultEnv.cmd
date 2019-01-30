@@ -1,0 +1,4 @@
+setx VAULT_ADDR "http://127.0.0.1:8200"
+setx VAULT_DEV_ROOT_TOKEN_ID "root"
+setx VAULT_HOST "127.0.0.1"
+setx VAULT_PORT "8200"

@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: configserver
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        bootstrap: true
+        git:
+          uri: https://github.com/quangyen/springcloud-openshift
+          search-paths: config-git
+          default-label: master
+          clone-on-start: true

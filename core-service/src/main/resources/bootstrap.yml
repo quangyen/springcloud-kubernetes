@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: foo
+  cloud:
+    vault:
+      host: localhost
+      scheme: http
+      port: 8200
+      uri: http://localhost:8200
+      connection-timeout: 5000
+      read-timeout: 15000
+      config:
+        order: 100
+      authentication: TOKEN
+      token: root
+      kv:
+        enabled: true
+        backend: secret2

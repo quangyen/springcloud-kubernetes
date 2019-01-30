@@ -1,0 +1,1 @@
+W:\Development\spring-boot\spring-cli\bin\spring cloud hystrixdashboard zipkin

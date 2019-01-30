@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    config:
+      name: kafka
+      uri: http://localhost:8888
+      token: root
