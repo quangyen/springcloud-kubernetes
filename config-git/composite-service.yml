@@ -7,3 +7,5 @@ spring:
     password: admin
     host: srv.docker
     port: 5672
+
+foo: foo
