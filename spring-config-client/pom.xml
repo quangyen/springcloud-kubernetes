@@ -9,10 +9,10 @@
         <version>1.0</version>
     </parent>
 
-    <artifactId>composite-service</artifactId>
+    <artifactId>spring-config-client</artifactId>
+    <name>spring-config-client</name>
     <version>1.0</version>
-    <name>composite-service</name>
-    <description>composite-service</description>
+    <description>spring-config-client</description>
 
     <dependencies>
         <dependency>
@@ -26,10 +26,6 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

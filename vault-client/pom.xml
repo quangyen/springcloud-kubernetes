@@ -9,10 +9,10 @@
         <version>1.0</version>
     </parent>
 
-    <artifactId>composite-service</artifactId>
+    <artifactId>vault-client</artifactId>
     <version>1.0</version>
-    <name>composite-service</name>
-    <description>composite-service</description>
+    <name>vault-client</name>
+    <description>vault-client</description>
 
     <dependencies>
         <dependency>
@@ -21,15 +21,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+            <artifactId>spring-cloud-starter-vault-config</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -51,5 +43,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
 </project>

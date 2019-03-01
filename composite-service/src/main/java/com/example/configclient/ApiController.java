@@ -1,4 +1,4 @@
-package com.example.compositeservice;
+package com.example.configclient;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
