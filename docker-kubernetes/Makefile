@@ -1,9 +1,9 @@
 TAG=$(shell git describe --tags --long)
-HASH=$(git rev-parse --short HEAD)
+HASH=$(shell git rev-parse --short HEAD)
 
 build:
-	mvn clean package -DskipTests
-    docker build -t docker-kubernetes:$(HASH)
+    mvn clean package -DskipTests
+    docker build -t docker-kubernetes:latest .
 
 version:
 	echo $(TAG)
