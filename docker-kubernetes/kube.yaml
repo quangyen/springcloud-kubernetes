@@ -8,7 +8,7 @@ spec:
     tier: backend
   ports:
   - protocol: TCP
-    port: 8081
+    port: 8080
   type: NodePort
 ---
 apiVersion: apps/v1
@@ -20,7 +20,7 @@ spec:
       matchLabels:
         app: docker-kubernetes
         tier: backend
-  replicas: 3
+  replicas: 2
   template:
     metadata:
       labels:
