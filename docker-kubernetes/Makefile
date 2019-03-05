@@ -83,4 +83,4 @@ repo-login: ## Auto login to AWS-ECR unsing aws-cli
 version: ## Output the current version
 	@echo $(VERSION)
 setup:
-    chmod +x version.sh
+	chmod +x version.sh
