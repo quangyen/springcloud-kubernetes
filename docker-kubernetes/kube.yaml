@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: docker-kubernetes
-          image: docker-kubernetes:5f8f537
+          image: docker-kubernetes:latest
           imagePullPolicy: Never
           ports:
             - containerPort: 8080
