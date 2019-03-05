@@ -23,9 +23,12 @@ help: ## This help.
 
 .DEFAULT_GOAL := help
 
+package: ## Package the application from source
+	mvn clean package -DskipTests
 # DOCKER TASKS
 # Build the container
 build: ## Build the container
+	make package
 	docker build -t $(APP_NAME) .
 
 build-nc: ## Build the container without caching
@@ -83,4 +86,4 @@ repo-login: ## Auto login to AWS-ECR unsing aws-cli
 version: ## Output the current version
 	@echo $(VERSION)
 setup:
-	chmod +x version.sh
+	chmod +x ./make/version.sh
